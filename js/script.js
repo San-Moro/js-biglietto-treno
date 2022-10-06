@@ -31,13 +31,13 @@ let price = "";
 if (age < 18) {
     // sconto del 20%;
     let discountSmall = basicTicket * 0.2;
-    // total price
-    price = basicTicket - discountSmall;
+    // totale prezzo
+    price =  basicTicket - discountSmall;
     console.log(price);
 } else if (age > 65) {
     // sconto del 40%;
     let discountBig = basicTicket * 0.4;
-    // total price
+    // totale prezzo
     price = basicTicket - discountBig;
     console.log(price);
 } else {
@@ -45,4 +45,7 @@ if (age < 18) {
 }
 
 // OUTPUT
-// Output => con massimo 2 decimali (-vedi documentazione tra preferiti-)
+// Output => con massimo 2 decimali 
+
+let result = price.toFixed(2);
+document.getElementById("price").innerHTML = result;
